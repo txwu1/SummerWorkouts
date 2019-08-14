@@ -1,5 +1,4 @@
 let getPosts = function(pageNum){
-    console.log(pageNum);
     let data = 
     {
         page: pageNum,
@@ -20,7 +19,6 @@ let getPosts = function(pageNum){
 };
 
 let getWorkouts = function(pageNum){
-    console.log(pageNum);
     let data = 
     {
         page: pageNum,
@@ -41,7 +39,6 @@ let getWorkouts = function(pageNum){
 };
 
 let getUpdates = function(pageNum){
-    console.log(pageNum);
     let data = 
     {
         page: pageNum,
@@ -63,7 +60,6 @@ let getUpdates = function(pageNum){
 
 let updateDisplay = function(target, dataObj){
     let display = $(target);
-    console.log(dataObj);
     let data = dataObj.data;
     display.html("");
     data.forEach(function(obj){
@@ -178,7 +174,15 @@ $(document).ready(function() {
         let pageNumSelector = target.parent().children().first().next().children().first();
         let pageNum = parseInt(pageNumSelector.text().split(" ")[1]);
         pageNumSelector.text("Page " + (pageNum + 1));
-        //getWorkouts(pageNum + 1);
+
+        let displayString = target.parent().parent().parent().parent().children().eq(1).attr('id');
+        if (displayString == "postsDisplay"){
+            getPosts(pageNum + 1);
+        } else if (displayString == "workoutsDisplay"){
+            getWorkouts(pageNum + 1);
+        } else if (displayString == "updatesDisplay"){
+            getUpdates(pageNum + 1);
+        }
     };
     $(".log-next").click(function(event){nextPage(event);});
 
@@ -196,7 +200,15 @@ $(document).ready(function() {
         if ((pageNum - 1) <= 1){
             target.prop("disabled", true);
         }
-        //getWorkouts(pageNum - 1);
+
+        let displayString = target.parent().parent().parent().parent().children().eq(1).attr('id');
+        if (displayString == "postsDisplay"){
+            getPosts(pageNum - 1);
+        } else if (displayString == "workoutsDisplay"){
+            getWorkouts(pageNum - 1);
+        } else if (displayString == "updatesDisplay"){
+            getUpdates(pageNum - 1);
+        }
     };
 
     $(".log-prev").click(function(event){prevPage(event);});

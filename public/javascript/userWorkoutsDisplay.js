@@ -117,7 +117,7 @@ $(document).ready(function() {
         }
         let pageNum = parseInt($("#pageNum").text().split(" ")[1]);
         $("#pageNum").text("Page " + (pageNum + 1));
-        //getWorkouts(pageNum + 1);
+        getWorkouts(pageNum + 1);
     };
     $("#next").click(nextPage);
 
@@ -127,15 +127,15 @@ $(document).ready(function() {
         if ((pageNum - 1) <= 1){
             $("#prev").prop("disabled", true);
         }
-        //getWorkouts(pageNum - 1);
+        getWorkouts(pageNum - 1);
     };
 
     $("#prev").click(prevPage);
 
-    //getWorkouts(1);
+    getWorkouts(1);
 
     //
     $("#postHistReload").click(function(){
-        //getWorkouts(1);
+        getWorkouts(1);
     });
 });
