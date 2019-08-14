@@ -1,0 +1,104 @@
+<script src="javascript/log.js"></script>
+<div>
+    <div>
+        <div>
+            <div class="container-fluid mx-auto my-2">
+                <div class="row mx-auto text-center">
+                    <div class="col-0 col-sm-3"></div>
+                    <div id="tab-posts" class="col fs-150 font-weight-bold active log-tab-btn"><p class="my-0">All Posts</p></div>
+                    <div id="tab-workouts" class="col fs-150 font-weight-bold log-tab-btn"><p class="my-0">Workouts</p></div>
+                    <div id="tab-updates" class="col fs-150 font-weight-bold log-tab-btn"><p class="my-0">Updates</p></div>
+                    <div class="col-0 col-sm-3"></div>
+                </div>
+            </div>
+            <div id="data-container">
+                <div class="container-fluid border rounded mx-auto my-3 mw-650 log-tab tab-active">
+                    <div class="row mx-auto mt-2">
+                        <div class="col"></div>
+                        <div class="col-7 col-sm-9 text-center">
+                            <p class="mx-auto mb-0 font-150 font-bold">Your Post History</p>
+                        </div>
+                        <div class="col d-flex">
+                            <button type="button" id="postHistReload" class="btn bg-white mx-auto" style="z-index: 5;"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                    <div class="row mx-auto" id="postsDisplay"></div>
+                    <div class="row text-center">
+                        <div class="col"></div>
+                        <div class="col-8 col-sm-6">
+                            <div class="row my-3">
+                                <button class="col page-link log-prev" disabled><i class="fas fa-angle-double-left pr-1"></i>Prev</button>
+                                <div class="col-4 col-lg-4"><p class="my-2">Page 1</p></div>
+                                <button class="col page-link log-next">Next<i class="fas fa-angle-double-right pl-1"></i></button>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div class="container-fluid border rounded mx-auto my-3 mw-650 log-tab uninitialized">
+                    <div class="row mx-auto mt-2">
+                        <div class="col"></div>
+                        <div class="col-7 col-sm-9 text-center">
+                            <p class="mx-auto mb-0 font-150 font-bold">Your Workouts</p>
+                        </div>
+                        <div class="col d-flex">
+                            <button type="button" id="workoutHistReload" class="btn bg-white mx-auto" style="z-index: 5;"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                    <div class="row mx-auto" id="workoutsDisplay"></div>
+                    <div class="row text-center">
+                        <div class="col"></div>
+                        <div class="col-8 col-sm-6">
+                        <div class="row my-3">
+                            <button class="col page-link log-prev" disabled><i class="fas fa-angle-double-left pr-1"></i>Prev</button>
+                            <div class="col-4 col-lg-4"><p class="my-2">Page 1</p></div>
+                            <button class="col page-link log-next">Next<i class="fas fa-angle-double-right pl-1"></i></button>
+                        </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div class="container-fluid border rounded mx-auto my-3 mw-650 log-tab uninitialized">
+                    <div class="row mx-auto mt-2">
+                        <div class="col"></div>
+                        <div class="col-7 col-sm-9 text-center">
+                            <p class="mx-auto mb-0 font-150 font-bold">Your Updates</p>
+                        </div>
+                        <div class="col d-flex">
+                            <button type="button" id="updateHistReload" class="btn bg-white mx-auto" style="z-index: 5;"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                    <div class="row mx-auto" id="updatesDisplay"></div>
+                    <div class="row text-center">
+                        <div class="col"></div>
+                        <div class="col-8 col-sm-6">
+                        <div class="row my-3">
+                            <button class="col page-link log-prev" disabled><i class="fas fa-angle-double-left pr-1"></i>Prev</button>
+                            <div class="col-4 col-lg-4"><p class="my-2">Page 1</p></div>
+                            <button class="col page-link log-next">Next<i class="fas fa-angle-double-right pl-1"></i></button>
+                        </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deleteModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Are you sure you want to delete this?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary deletePost" data-dismiss="modal">Delete Post</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

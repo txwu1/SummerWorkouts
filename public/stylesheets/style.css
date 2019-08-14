@@ -1,0 +1,161 @@
+
+
+.content-wrapper{
+    width: 100%;
+}
+
+.body-font{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAV BAR */
+.header-bar-wrapper{
+    background-color: #e3ff00;
+}
+
+.header-bar{
+    max-width: 1920px;
+}
+
+/* HOME PAGE */
+.home-login{
+    background-color: rgb(241, 111, 3);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.home-login:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.home-login:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.home-or-fs{
+    font-size: 170%;
+}
+
+/* LOGIN PAGE */
+
+.login-width{
+    max-width: 500px;
+}
+
+.font-error{
+    font-size: 150%;
+}
+
+/* USER PAGE */
+
+.mw-500{
+    max-width: 500px;
+}
+
+.add-button{
+    border: none;
+}
+
+.add-button:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+.add-button:focus{
+    outline: none;
+}
+
+.bg-gray{
+    background-color: rgb(209, 209, 209);
+}
+
+.bg-white{
+    background-color: white;
+}
+
+select{
+    text-align-last:center;
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+}
+
+.mw-650{
+    max-width: 650px;
+}
+
+.w-80{
+    width: 80px;
+}
+
+.font-150{
+    font-size: 150%;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.border-5{
+    border-width: 5px !important;
+}
+
+.display-ib{
+    display: inline-block;
+}
+
+.color-green{
+    color: green;
+}
+
+.w-50p{
+    width: 50%;
+}
+
+
+/* LOG */
+
+.fs-150{
+    font-size: 150%;
+}
+
+@media screen and (max-width: 550px){
+    .fs-150{
+        font-size: 125%;
+    }
+}
+
+.log-tab-btn:hover{
+    background-color: #f5f0f0;
+}
+
+.log-tab-btn{
+    cursor: pointer;
+}
+
+div .active p{
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+.log-tab{
+    display: none;
+}
+
+.tab-active{
+    display: block;
+}
+
+button:disabled{
+    color: gray;
+}
+
+button:disabled:hover{
+    color: gray;
+}

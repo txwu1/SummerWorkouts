@@ -1,0 +1,28 @@
+<div>
+    <div class="mt-5">
+        <div class="container-fluid border rounded-0 border-secondary login-width mx-auto">
+            {{#if error}}
+            <div class="m-4 text-center">
+                <div class="font-error">
+                    <p><i class="fas fa-exclamation-circle"></i> There has been an error logging in. Try again.</p>
+                </div>
+            </div>
+            {{/if}}
+            <div class="m-4">
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" name="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+                    </div>
+                    <div class="mw-100 text-center mt-4">
+                        <button type="submit" formaction="/login/auth" formmethod="post" class="btn btn-primary mw-100 mx-auto">Login</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
